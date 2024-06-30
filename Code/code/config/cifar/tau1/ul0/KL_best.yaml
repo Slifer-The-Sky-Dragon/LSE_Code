@@ -1,0 +1,33 @@
+optimizer: 'SGD'
+dataset: 'cifar_1.0'
+num_sample: 1
+weight_decay: 
+- 0.0001
+- 0.0001
+lr: 0.005
+epochs: 120
+batch_size: 128
+batch_log_interval: 50
+train_limit: 500_000
+lamda: 0.9
+experiment: 
+<<<<<<< HEAD:code/config/cifar/tau5/ul0/KL2.yaml
+  name: 'KL2_best'
+  n_exp: 3
+  n_trials: 1
+  feedback: null
+  regularizers:
+    KL2:
+    - 1.0
+    - 1.0
+=======
+  name: 'KL_best'
+  n_exp: 2
+  n_trials: 1
+  feedback: null
+  regularizers:
+    KL: 
+    - 10.0
+    - 10.0
+>>>>>>> 673c86560494b2826f6a68af8348b414d1e7f043:code/config/cifar/tau1/ul0/KL_best.yaml
+  labeled_portion: u0

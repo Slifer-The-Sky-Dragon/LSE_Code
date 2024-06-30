@@ -1,0 +1,2 @@
+python create_bandit_dataset.py --config config/cifar/supervised_feature.yaml --device cuda:1 --linear --tau 1.0 --ul 0 --dataset cifar --raw_image --feature_size 2048  --gamma_noise_beta 0.01
+python create_bandit_dataset.py --config config/cifar/supervised_feature.yaml --device cuda:1 --linear --tau 1.0 --ul 0 --dataset cifar --raw_image --feature_size 2048  --gamma_noise_beta 5

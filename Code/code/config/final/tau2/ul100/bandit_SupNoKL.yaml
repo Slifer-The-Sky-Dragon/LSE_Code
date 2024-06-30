@@ -1,0 +1,19 @@
+optimizer: 'SGD'
+dataset: 'cifar_ul100_1.0_tau0.5'
+num_sample: 1
+weight_decay: 0.0005
+lr: 0.005
+epochs: 200
+batch_size: 128
+batch_log_interval: 50
+train_limit: 500_000
+lamda: 0.9
+lr_sch: OneCycle
+experiment: 
+  name: 'full_bandit_feedback_SupNoKL'
+  n_exp: 3
+  feedback: 'bandit'
+  regularizers:
+    SupKL: 1.0
+    eps: 0.3
+  labeled_portion: u100

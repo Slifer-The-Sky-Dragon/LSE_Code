@@ -1,0 +1,1 @@
+python create_bandit_dataset.py --config config/cifar/supervised_feature.yaml --device cuda:0 --linear --tau 1.0 --ul 0 --dataset cifar --raw_image --feature_size 2048  --gaussian_imbalance 20000

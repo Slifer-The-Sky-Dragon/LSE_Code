@@ -1,0 +1,17 @@
+optimizer: 'SGD'
+dataset: 'cifar100_pretrained_feature/base'
+num_sample: 1
+weight_decay: 0.0001
+lr_sch: CosineAnnealingLR
+lr: 0.01
+epochs: 300
+batch_size: 128
+batch_log_interval: 50
+train_limit: 500_000
+lamda: 0.9
+experiment:
+  name: 'logging_policy_linear'
+  n_exp: 1
+  feedback: 'supervised'
+  regularizers: null
+  labeled_portion: 1.0

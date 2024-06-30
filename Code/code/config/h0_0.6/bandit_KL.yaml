@@ -1,0 +1,17 @@
+optimizer: 'SGD'
+dataset: 'cifar_0.6'
+num_sample: 1
+weight_decay: 0.0001
+lr: 0.02
+epochs: 120
+batch_size: 128
+batch_log_interval: 50
+train_limit: 500_000
+lamda: 0.9
+experiment: 
+  name: 'full_bandit_feedback_KL'
+  n_exp: 5
+  feedback: 'bandit'
+  regularizers:
+    KL: 0.01
+  labeled_portion: 1.0

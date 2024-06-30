@@ -1,0 +1,18 @@
+optimizer: 'SGD'
+dataset: 'yeast/base'
+num_sample: 1
+weight_decay: 0.0000
+lr: 2.0
+lr_sch: CosineAnnealingLR
+epochs: 100
+batch_size: 32
+batch_log_interval: 50
+train_limit: 500_000
+lamda: 0.9
+experiment: 
+  name: 'supervised'
+  n_exp: 1
+  n_trials: 1
+  feedback: 'supervised'
+  regularizers: null
+  labeled_portion: u0

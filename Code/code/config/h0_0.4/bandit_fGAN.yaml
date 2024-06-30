@@ -1,0 +1,18 @@
+optimizer: 'SGD+Adam'
+dataset: 'cifar_0.4'
+num_sample: 1
+weight_decay: 0.0001
+lr: 0.0002
+max_lr: 0.01
+epochs: 150
+batch_size: 128
+batch_log_interval: 50
+train_limit: 500_000
+lamda: 0.9
+experiment: 
+  name: 'full_bandit_feedback_fGAN'
+  n_exp: 1
+  feedback: 'bandit'
+  regularizers: 
+    KL: 0.01
+  labeled_portion: 1.0

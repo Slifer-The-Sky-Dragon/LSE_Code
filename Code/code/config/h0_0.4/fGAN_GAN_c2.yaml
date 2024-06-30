@@ -1,0 +1,22 @@
+optimizer: 'SGD+Adam'
+dataset: 'cifar_0.4'
+num_sample: 1
+weight_decay: 0.0005
+lr: 0.005
+max_lr: 0.01
+epochs: 200
+batch_size: 64
+batch_log_interval: 50
+train_limit: 500_000
+lamda: 0.9
+experiment: 
+  name: 'fGAN_GAN_c2'
+  n_exp: 1
+  feedback: null
+  regularizers: 
+    KL: 1.0
+  labeled_portion: 1.0
+GAN:
+  V_update: 3
+  V_step: 5
+  divergence: GAN
