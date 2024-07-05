@@ -24,5 +24,19 @@ The Code folder contains all scripts for Log-Sum-Exponential Estimator. The code
     * data: A folder containing open bandit dataest data.
  
 # How to Run:
-* First, the user needs to download and store the raw dataset using preprocess_raw_dataset_from_model.py.
-  > code
+* 1. The user needs to download and store the raw dataset using preprocess_raw_dataset_from_model.py. Example:
+  ```python
+  python manage.py
+  ```
+* 2. train a logging policy on the created dataset. Example:
+  ```python
+  python code/train_logging_policy.py
+  ```
+* 3. Create a Logged Bandit Feedback Dataset. Example:
+  ```python
+  python code/create_bandit_dataset.py
+  ```
+* 4. Train an estimator. Example:
+  ```python
+  python code/main_semi_ot.py
+  ```
