@@ -28,7 +28,7 @@ The Code folder contains all scripts for Log-Sum-Exponential Estimator. The code
   ```python
   python preprocess_raw_dataset_from_model.py --config code/config/emnist/h0/linear.yaml --device cuda:0 --tau 1.0 --ul 0 --dataset emnist
   ```
-* 2. train a logging policy on the created dataset. Example:
+* 2. Train a logging policy on the created dataset. Example:
   ```python
   python code/train_logging_policy.py --config code/config/emnist/h0/linear.yaml --device cuda:0 --tau 1.0 --dataset emnist --linear --raw_image
 
