@@ -24,20 +24,20 @@ The Code folder contains all scripts for Log-Sum-Exponential Estimator. The code
     * data: A folder containing open bandit dataest data.
  
 # How to Run:
-* 1. The user needs to download and store the raw dataset using preprocess_raw_dataset_from_model.py. Example:
+* The user needs to download and store the raw dataset using preprocess_raw_dataset_from_model.py. Example:
   ```python
   python preprocess_raw_dataset_from_model.py --config code/config/emnist/h0/linear.yaml --device cuda:0 --tau 1.0 --ul 0 --dataset emnist
   ```
-* 2. Train a logging policy on the created dataset. Example:
+* Train a logging policy on the created dataset. Example:
   ```python
   python code/train_logging_policy.py --config code/config/emnist/h0/linear.yaml --device cuda:0 --tau 1.0 --dataset emnist --linear --raw_image
 
   ```
-* 3. Create a Logged Bandit Feedback Dataset. Example:
+* Create a Logged Bandit Feedback Dataset. Example:
   ```python
    python code/create_bandit_dataset.py --config code/config/emnist/h0/linear.yaml --device cuda:0 --linear --tau 1.0 --ul 0 --dataset emnist --raw_image
   ```
-* 4. Train an estimator. Example:
+* Train an estimator. Example:
   ```python
   python main_semi_ot.py --config config/emnist/linear/lse_bandit.yaml --tau 1.0 --ul 0 --device cuda:0 --raw_image --linear
   ```
